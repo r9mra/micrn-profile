@@ -1,9 +1,81 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>个人主页 - r9mra</title>
-  </head>
-  <body>
-    <h2>欢迎!</h2>
-  </body>
+    <style>
+        body {
+            margin: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .section {
+            background: white;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        }
+        .contact-list {
+            padding: 0;
+            list-style: none;
+        }
+        .contact-list li {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        a {
+            color: #008dff !important;
+            text-decoration: none !important;
+        }
+        #rewardImg {
+            display: none;
+            height: 50px;
+        }
+        .remark {
+            margin: 2rem 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align:center">欢迎</h1>
+        <h4 style="text-align:center">个人主页 - r9mra</h4>
+    </header>
+
+    <section class="section">
+        <h4>相关链接</h4>
+        <ul class="contact-list">
+            <li><a href="mailto:r9mra@outlook.com">邮箱 r9mra@outlook.com</a></li>
+            <li><a href="https://qm.qq.com/q/mJDNVMPlok">QQ 743784343</a></li>
+            <li><a href="https://www.123865.com/s/olhwTd-B2e4">123云盘资源链接</a></li>
+            <li><a href="https://www.123912.com/s/olhwTd-B2e4">备用链接</a></li>
+            <li>
+                <button id="toggleBtn">打赏</button>
+                <img id="rewardImg" src="rewardcode.png" alt="打赏二维码">
+            </li>
+        </ul>
+    </section>
+
+    <div class="remark">
+        <p>这个网页包含了一些关于作者的链接</p>
+        <p>若要了解更多，请添加作者的联系方式</p>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const rewardImg = document.getElementById('rewardImg');
+        
+        toggleBtn.addEventListener('click', () => {
+            const isVisible = rewardImg.style.display === 'block';
+            rewardImg.style.display = isVisible ? 'none' : 'block';
+            toggleBtn.textContent = isVisible ? '打赏' : '取消';
+        });
+    </script>
+</body>
 </html>
