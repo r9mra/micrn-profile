@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>主页</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <style>
         <style>
             body {
@@ -11,6 +11,7 @@
                 display: flex;
                 flex-direction: column;
             }
+            
             .bar-passage {
                 background: #3f3f3f;
                 color: #c9d2ff;
@@ -21,21 +22,37 @@
                 width: 100%;
                 font-size: 1vh;
             }
+            
             a {
                 color: #007fff;
             }
+            
             #avatar-image {
                 width: 1vh;
                 height: 1vh;
-                border: 2px solid #3f3f3f;
+                border: 0.2vh solid #3f3f3f;
+            }
+            
+            #otherName {
+                height: 1vh;
+                font-size: 1vh;
+                border: none;
+                color: #007fff;
+                background: #3f3f3f;
             }
         </style>
     </head>
     <body>
         <div class="bar-passage">
             <img src="https://avatars.githubusercontent.com/u/203423009?v=4" id="avatar-image">
-            MicRN / r9mra / r9 / rzjrzy 
+            micrn /
+            <button id="otherName" onclick="showOtherName()">其他</button>
             <a href="links.html">相关链接</a>
         </div>
+        <script>
+            function showOtherName() {
+                window.alert("常用名\nmicrn\nr9mra\nr9\nrzjrzy","defaultvalue");
+                }
+        </script>
     </body>
 </html>
